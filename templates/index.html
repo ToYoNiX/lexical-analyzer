@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Code Lexer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <script src="/static/js/getLexemes.js" defer></script>
+  </head>
+  <body>
+    <h1>Enter Code:</h1>
+    <form id="codeForm">
+      <select id="lexerSelect">
+        {% for lexer_name in lexer_names %}
+        <option value="{{ lexer_name }}">{{ lexer_name | capitalize }}</option>
+        {% endfor %}
+      </select>
+      <textarea name="code" id="code" rows="10" cols="50"></textarea><br />
+      <button type="submit">Lex Code</button>
+    </form>
+
+    <h2>Lexemes:</h2>
+    <ul id="lexemes"></ul>
+  </body>
+</html>
