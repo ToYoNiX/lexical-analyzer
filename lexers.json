@@ -4,7 +4,7 @@
       "KEYWORD": "\\b(int|return|if|else|while|for|float|char|void)\\b",
       "IDENTIFIER": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b",
       "NUMBER": "\\b\\d+(\\.\\d*)?\\b",
-      "OPERATOR": "[\\+\\-\\*/=<>!]",
+      "OPERATOR": "[\\+\\-\\*=<>!]|\\/(?![\\/*])",
       "PUNCTUATION": "[{}();,]",
       "STRING": "\\\".*?\\\"",
       "WHITESPACE": "\\s+",
@@ -19,6 +19,19 @@
       "OPERATOR": "[\\+\\-\\*/=<>!%&|^~]",
       "PUNCTUATION": "[{}()\\[\\]:,\\.]",
       "STRING": "(\\\".*?\\\"|\\'.*?\\')",
+      "WHITESPACE": "\\s+",
+      "UNKNOWN": "."
+    }
+  },
+  "c_minus": {
+    "spec": {
+      "KEYWORD": "\\b(int|float|void|if|else|while|return)\\b",
+      "IDENTIFIER": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b",
+      "NUMBER": "\\b\\d+(\\.\\d*)?\\b",
+      "COMMENT": "\\/\\/.*|\\/\\*[\\s\\S]*?\\*\\/",
+      "OPERATOR": "[\\+\\-\\*=<>!]|\\/(?![\\/*])",
+      "PUNCTUATION": "[{}();,]",
+      "STRING": "\\\".*?\\\"",
       "WHITESPACE": "\\s+",
       "UNKNOWN": "."
     }

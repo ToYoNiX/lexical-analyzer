@@ -25,7 +25,7 @@ def index():
 def lex():
     data = request.get_json()
     code = data.get('code')
-    lexer_choice = data.get('lexer', 'tiny_c')  # Default tiny_c
+    lexer_choice = data.get('lexer')
     lexer = lexers.get(lexer_choice)
 
     if not lexer:
