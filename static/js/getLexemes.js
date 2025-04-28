@@ -14,7 +14,7 @@ document
     lexemeList.innerHTML = "";
     data.lexemes.forEach(function (lex) {
       const li = document.createElement("li");
-      li.textContent = lex[0] + ": '" + lex[1] + "'";
+      li.textContent = `${lex.type}: '${lex.value}' (Line: ${lex.line}, Column: ${lex.column})`;
       lexemeList.appendChild(li);
     });
   });

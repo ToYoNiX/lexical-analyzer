@@ -32,4 +32,11 @@ def lex():
         return jsonify({'error': 'Invalid lexer selected'}), 400
 
     tokens = lexer.tokenize(code)
-    return jsonify({'lexemes': tokens})
+    # Convert tokens to a format that can be JSON serialized
+    token_data = [{
+        'type': token[0],
+        'value': token[1],
+        'line': token[2],
+        'column': token[3]
+    } for token in tokens]
+    return jsonify({'lexemes': token_data})
