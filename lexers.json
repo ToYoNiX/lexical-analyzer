@@ -5,7 +5,7 @@
       "IDENTIFIER": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b",
       "NUMBER": "\\b\\d+(\\.\\d*)?\\b",
       "COMMENT": "\\/\\/.*|\\/\\*[\\s\\S]*?\\*\\/",
-      "OPERATOR": "==|<=|>=|[\\+\\-\\*/=<>!]|\\/(?![\\/*])",
+      "OPERATOR": ">>|<<|==|<=|>=|[\\+\\-\\*/=<>!]|\\/(?![\\/*])",
       "PUNCTUATION": "[{}();,]",
       "STRING": "\\\".*?\\\"",
       "WHITESPACE": "\\s+",
@@ -14,11 +14,11 @@
   },
   "tiny_c": {
     "spec": {
-      "KEYWORD": "\\b(int|return|if|else|while|for|float|char|void)\\b",
+      "KEYWORD": "\\b(int|return|if|else|while|for|float|char|void|bool|true|false|do|switch|case|break|default)\\b",
       "IDENTIFIER": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b",
       "NUMBER": "\\b\\d+(\\.\\d*)?\\b",
       "COMMENT": "\\/\\/.*|\\/\\*[\\s\\S]*?\\*\\/",
-      "OPERATOR": "==|<=|>=|[\\+\\-\\*/=<>!]|\\/(?![\\/*])",
+      "OPERATOR": ">>|<<|==|<=|>=|[\\+\\-\\*/=<>!]|\\/(?![\\/*])",
       "PUNCTUATION": "[{}();,]",
       "STRING": "\\\".*?\\\"",
       "WHITESPACE": "\\s+",
